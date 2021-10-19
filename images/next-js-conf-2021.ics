@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//AddEvent Inc//AddEvent.com v1.7//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:STANDARD
+DTSTART:20211107T010000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20210314T030000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20211018T140242Z
+STATUS:CONFIRMED
+UID:1634565762addeventcom
+SEQUENCE:0
+DTSTART;TZID=America/Los_Angeles:20211026T090000
+DTEND;TZID=America/Los_Angeles:20211026T130000
+SUMMARY:Next.js Conf 2021
+DESCRIPTION:Break away from the Zoom meetings & Slack channels on October 26. Join us and make the web. Faster.\n\nThe Next.js Community continues to add incredible features to push developer & user experience to the cutting edge. At Next.js Conf\, members of Vercel (creators of Next.js) and the Next.js Community will present the latest features and methods for creating high performing sites and apps with your team.
+X-ALT-DESC;FMTTYPE=text/html:Break away from the Zoom meetings &amp; Slack channels on October 26. Join us and make the web. Faster.<br><br>The Next.js Community continues to add incredible features to push developer &amp; user experience to the cutting edge. At Next.js Conf, members of Vercel (creators of Next.js) and the Next.js Community will present the latest features and methods for creating high performing sites and apps with your team.
+LOCATION:nextjs.org/conf
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
