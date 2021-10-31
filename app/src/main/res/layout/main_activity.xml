@@ -22,11 +22,11 @@
         android:id="@+id/Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
         android:layout_gravity="center"
         android:layout_marginTop="-125px"
+        android:ems="10"
         android:hint="@string/password"
+        android:inputType="textPassword"
         tools:ignore="Autofill" />
     <Button
         android:id="@+id/ingresar"
@@ -35,17 +35,19 @@
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="255dp"
         android:onClick="registroUsuarios"
+        android:background="@drawable/button_rounded"
         android:text="@string/ingresar"
  />
+
     <Button
         android:id="@+id/registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/registrarse"
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="195dp"
         android:background="@drawable/button_rounded"
-        android:onClick="registroUsuarios"/>
+        android:onClick="registroUsuarios"
+        android:text="@string/registrarse" />
 
     <TextView
         android:id="@+id/textView1"
