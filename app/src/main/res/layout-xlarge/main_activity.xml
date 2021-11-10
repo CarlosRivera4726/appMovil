@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Entrada para email-->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="391dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="275px"
+        android:ems="10"
+        android:hint="@string/email"
+        android:textSize="115px"
+        android:inputType="textEmailAddress"
+        tools:ignore="Autofill,PxUsage" />
+    <!--Entrada para password!-->
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="391dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15px"
+        android:textSize="60px"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/ingresar"
+        android:layout_width="302dp"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="455dp"
+        android:background="@drawable/button_rounded"
+        android:onClick="registroUsuarios"
+        android:text="@string/ingresar"
+        android:textSize="70px" />
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="276dp"
+        android:layout_height="154dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="195dp"
+        android:layout_marginTop="15dp"
+        android:textSize="40px"
+        android:background="@drawable/button_rounded"
+        android:onClick="registroUsuarios"
+        android:text="registrarse" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:text="TAROT-CORP"
+        android:textColor="#F44336"
+        android:textSize="170px" />
+
+</FrameLayout>

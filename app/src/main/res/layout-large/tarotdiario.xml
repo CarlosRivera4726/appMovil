@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <Button
+        android:id="@+id/tiradaClasica"
+        android:layout_width="120dp"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:onClick="tiradaClasica"
+        android:text="Tirada Clasica"
+
+        tools:ignore="HardcodedText" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="58dp"
+        android:text="@string/el_camino_diario"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="215dp"
+        android:layout_height="292dp"
+        android:layout_gravity="center|top"
+        android:contentDescription="img tirada clasico"
+        app:srcCompat="@drawable/tiradaclasica"
+        tools:ignore="HardcodedText" />
+    <ImageView
+        android:id="@+id/goBack2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/goback"
+        android:onClick="irAtras"
+        android:contentDescription="@string/go_back" />
+
+</FrameLayout>
