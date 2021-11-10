@@ -1,26 +1,26 @@
 package com.example.tarotcorp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-//importacion de librerias necesarias para manejar los Buttons, editText, etc
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.widget.Button;
+import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Bundle;
-import android.view.View;
-//imports necessarios para manejar los eventos de los botones
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.tarotcorp.ui.main.MainFragment;
-//imports necesarios para manejar archivos, arraylist y funciones de random
-import java.io.File;
+
 import java.util.ArrayList;
 import java.util.Random;
+
+//importacion de librerias necesarias para manejar los Buttons, editText, etc
+//imports necessarios para manejar los eventos de los botones
+//imports necesarios para manejar archivos, arraylist y funciones de random
 
 public class MainActivity extends AppCompatActivity {
 //documenta este codigo
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     //la actividad se crea cuando se inicia
     //la actividad se destruye cuando se cierra
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //funcion onConfigurationChanged, sirve para manejar la orientacion de la pantalla
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         Toast.makeText(this, "onConfigurationChanged", Toast.LENGTH_SHORT).show();
     }
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         te permite ir a la actividad anterior
         cada boton esta asociado a un frame y cada 1 tiene un metodo onClick
     */
+    @SuppressLint("NonConstantResourceId")
     public void irAtras(View v){
         switch(v.getId()){
             case R.id.goBack1:
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         dentro de esta vista se crean los EditText para que el usuario pueda ingresar sus datos una vez complete
         el formulario el usuario presiona el boton registrarse el cual esta en un case y llama a la logica de registro
     */
+    @SuppressLint("NonConstantResourceId")
     public void registroUsuarios(View v){
         switch(v.getId()){
             case R.id.registro:
@@ -102,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
             //lo cual genera un codigo mas limpio
             //por el momento se deja así para no alargar el tiempo de entrega, en una futura actualizacion se puede llevar a cabo la implementacion de lo dicho 
             //a dia de hoy 31/10/2021
-                textEmail = (EditText) findViewById(R.id.email);
-                textNumeros = (EditText) findViewById(R.id.Numero);
-                textPassword = (EditText) findViewById(R.id.Password);
-                textPasswordConfirm = (EditText) findViewById(R.id.PasswordConfirm);
+                textEmail = findViewById(R.id.email);
+                textNumeros = findViewById(R.id.Numero);
+                textPassword = findViewById(R.id.Password);
+                textPasswordConfirm = findViewById(R.id.PasswordConfirm);
                 boolean txtEmail = textEmail.getText().toString().isEmpty();
                 boolean txtNumeros = textNumeros.getText().toString().isEmpty();
                 boolean txtPassword = textPassword.getText().toString().isEmpty();
@@ -135,8 +138,6 @@ public class MainActivity extends AppCompatActivity {
                 //hay una validacion la cual permite saber si el correo ingresado ya esta en el arraylist de emails, sino es así
                 //muestra un mensaje de error advirtiendo que el email no existe
             case R.id.ingresar:
-                //System.out.println(emails);
-                //System.out.println(textEmail.getText().toString());
                 if(emails.isEmpty() || textEmail.getText().toString().isEmpty()){
                     Toast.makeText(this, "Ingresa los datos primero", Toast.LENGTH_SHORT).show();
                 }else {
@@ -189,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
     //aleatorio.setSeed permite que cuando el usuario vuelve hacia atras se vuelva a mostrar una imagen diferente y no se muestre la misma con su interpretacion
     //por el momento se tienen 3 casos diferentes para que el usuario pueda ver las imagenes y sus interpretaciones
     //pero se pueden agregar mas casos para que el usuario pueda ver mas imagenes y sus interpretaciones
+    @SuppressLint("NonConstantResourceId")
     public void mostrarImagen(View v){
 
         intAletorio = aleatorio.nextInt(3)+1;
@@ -197,23 +199,23 @@ public class MainActivity extends AppCompatActivity {
         //para pasarlas al segundo switch y que este pueda mostrarlas adecuadamente
         switch(intAletorio){
             case 1:
-                tarot = (ImageView) findViewById(R.id.imageView1);
-                interpretacion = (TextView) findViewById(R.id.interpretacion1);
+                tarot = findViewById(R.id.imageView1);
+                interpretacion = findViewById(R.id.interpretacion1);
                 break;
             case 2:
-                tarot = (ImageView) findViewById(R.id.imageView2);
-                interpretacion = (TextView) findViewById(R.id.interpretacion2);
+                tarot = findViewById(R.id.imageView2);
+                interpretacion = findViewById(R.id.interpretacion2);
                 break;
             case 3:
-                tarot = (ImageView) findViewById(R.id.imageView3);
-                interpretacion = (TextView) findViewById(R.id.interpretacion3);
+                tarot = findViewById(R.id.imageView3);
+                interpretacion = findViewById(R.id.interpretacion3);
                 break;
         }
 
         //este segundo switch nos permite mostrar las imagenes y las interpretaciones en el juego en una nueva vista
         switch (v.getId()){
             case R.id.barajarCartas:
-                tarot.setVisibility(v.VISIBLE);
+                tarot.setVisibility(View.VISIBLE);
                 Toast.makeText(this, "Toca la imagen para mostrarla en otra vista!.", Toast.LENGTH_SHORT).show();
                 break;
 
@@ -239,19 +241,15 @@ public class MainActivity extends AppCompatActivity {
     //esta funcion permite entrar a la vista tarotDiario
     @SuppressLint("NonConstantResourceId")
     public void tarotDiarioActive(View v){
-        switch (v.getId()){
-
-            case R.id.tarotDiario:
-                setContentView(R.layout.tarotdiario);
-                break;
+        if (v.getId() == R.id.tarotDiario) {
+            setContentView(R.layout.tarotdiario);
         }
     }
-//y esta funcion permite entrar a la vista tiradaClasicsa
+//y esta funcion permite entrar a la vista tiradaClasica
+    @SuppressLint("NonConstantResourceId")
     public void tiradaClasica(View v){
-        switch(v.getId()){
-            case R.id.tiradaClasica:
-                setContentView(R.layout.tiradaclasica);
-                break;
+        if (v.getId() == R.id.tiradaClasica) {
+            setContentView(R.layout.tiradaclasica);
         }
     }
 }

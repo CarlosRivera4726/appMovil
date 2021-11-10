@@ -4,6 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/drawable/button_rounded.xml" value="0.3671875" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-240dp/main_activity.xml" value="0.2717391304347826" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-320dp/main_activity.xml" value="0.2717391304347826" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-large/imagenes.xml" value="0.5952380952380952" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-large/main_activity.xml" value="0.5952380952380952" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-large/main_fragment.xml" value="0.5952380952380952" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-large/menuprincipal.xml" value="0.4675" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-large/registro.xml" value="0.5952380952380952" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-large/tarotdiario.xml" value="0.5952380952380952" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-large/tiradaclasica.xml" value="0.5952380952380952" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-medium-small/main_activity.xml" value="0.2717391304347826" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-medium/main_activity.xml" value="0.2717391304347826" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-small/main_activity.xml" value="0.9868421052631579" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-xlarge/imagenes.xml" value="0.20491803278688525" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-xlarge/main_activity.xml" value="0.20491803278688525" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-xlarge/main_fragment.xml" value="0.20491803278688525" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-xlarge/menuprincipal.xml" value="0.20491803278688525" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-xlarge/registro.xml" value="0.20491803278688525" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-xlarge/tarotdiario.xml" value="0.20491803278688525" />
+        <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout-xlarge/tiradaclasica.xml" value="0.20491803278688525" />
         <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout/cartas.xml" value="0.19479166666666667" />
         <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout/imagenes.xml" value="0.302536231884058" />
         <entry key="..\:/AndroidStudioProjects/TarotCorp/app/src/main/res/layout/main_activity.xml" value="0.33016304347826086" />
